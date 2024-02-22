@@ -1,0 +1,17 @@
+.services {
+    margin: 75px 205px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+.services__title {
+    font-family: IFKica, serif;
+    font-weight: bold;
+    font-size: 32px;
+    color: var(--color-black);
+    text-align: right;
+}
+.services__photos {
+    display: flex;
+    justify-content: space-between;
+}
