@@ -12,8 +12,60 @@
     text-align: right;
 }
 .prices__card {
+    display: flex;
     border: 1px solid var(--color-black);
 }
 .card__info {
-
+    width: 100%;
+    padding: 48px 63px;
+}
+.card__info-header {
+    font-family: IFKica, serif;
+    font-size: 32px;
+    color: var(--color-black);
+}
+.card__info-subheader {
+    font-family: RozoviiChulok, serif;
+    font-size: 22px;
+    color: var(--color-red);
+    text-align: right;
+}
+.card__info-list {
+    font-family: IFKica, serif;
+    font-weight: lighter;
+    font-size: 20px;
+    color: var(--color-black);
+    list-style-position: inside;
+    padding-bottom: 51px;
+}
+.card__info-list li {
+    margin-bottom: 21px
+}
+.card__info-list li:last-child {
+    margin-top: 24px;
+    margin-bottom: 0;
+}
+.card__info-list li span {
+    position: relative;
+    left: -10px;
+}
+.card__info-footer {
+    display: flex;
+    justify-content: space-between;
+}
+.card__info-price {
+    font-family: IFKica, serif;
+    font-weight: bold;
+    font-size: 32px;
+    color: var(--color-red);
+}
+.card__info-button {
+    width: 264px;
+    height: 49px;
+    border: none;
+    background-color: var(--color-red);
+    font-family: IFKica, serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--color-white)
 }
