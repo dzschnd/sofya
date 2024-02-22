@@ -1,4 +1,7 @@
 .contacts {
+    margin: 0 auto;
+    max-width: 1440px;
+
     height: 445px;
     background-color: var(--color-black);
     padding: 44px 202px 0;

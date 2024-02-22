@@ -1,5 +1,7 @@
 .main {
-    height: 1045px;
+    margin: 0 auto;
+    max-width: 1440px;
+    min-height: 1045px;
     background-image: url("../../assets/images/sonya-welcome.png");
     background-position: right top;
     background-repeat: no-repeat;

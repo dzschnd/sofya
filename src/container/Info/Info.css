@@ -1,5 +1,6 @@
 .info {
-    margin: 0 24px;
+    margin: 0 auto;
+    max-width: 1392px;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -21,7 +22,7 @@
  }
 .info__content {
     display: flex;
-    justify-content: space-between;
+    gap: 24px;
 }
 .info__title {
     font-family: IFKica, serif;

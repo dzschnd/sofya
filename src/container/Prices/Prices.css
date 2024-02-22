@@ -1,5 +1,8 @@
 .prices {
-    margin: 9px 204px 100px;
+    margin: 0 auto;
+    max-width: 1032px;
+
+    margin: 9px auto 100px;
     display: flex;
     flex-direction: column;
     gap: 24px;
