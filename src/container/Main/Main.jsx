@@ -25,28 +25,16 @@ const Main = () => (
                 <span>из Тюмени</span>
             </div>
             <div className='hero__quote'>
-                Покажу твою красоту й чувственность через свои взгляд
+                Покажу твою красоту<br/>
+                й чувственность через<br/>
+                свои взгляд
             </div>
-            <div className='hero__quote'>
+            <div className='hero__button'>
                 <button>
                     Хочу съемку
                 </button>
             </div>
         </div>
-
-        {/*<div className='app__header'>*/}
-        {/*    <div className='app__header-name'>*/}
-        {/*        Sofya*/}
-        {/*    </div>*/}
-        {/*    <div className='app__header-navigation'>*/}
-        {/*        <ul className='app__header-links'>*/}
-        {/*            <li><a href='#info'>Обо мне</a></li>*/}
-        {/*            <li><a href='#portfolio'>Портфолйо</a></li>*/}
-        {/*            <li><a href='#prices'>Праис</a></li>*/}
-        {/*            <li><a href='#QnA'>Q&A</a></li>*/}
-        {/*        </ul>*/}
-        {/*    </div>*/}
-        {/*</div>*/}
     </div>
 );
 

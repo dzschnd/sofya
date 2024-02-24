@@ -1,20 +1,16 @@
 .prices {
-    margin: 0 auto;
     max-width: 1032px;
-
     margin: 9px auto 100px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
 }
 .prices__title {
+    margin-bottom: 24px;
     font-family: IFKica, serif;
     font-weight: bold;
     font-size: 32px;
     color: var(--color-black);
     text-align: right;
 }
-.prices__card {
+.prices__content {
     display: flex;
     border: 1px solid var(--color-black);
 }

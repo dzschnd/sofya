@@ -1,9 +1,11 @@
 .quote {
     margin: 0 auto;
-    width: 1440px;
+    max-width: 1440px;
     height: 551px;
     padding: 143px 203px 143px 732px;
-    background-image: url('../../assets/images/sonya-quote.png');
+    background: url('../../assets/images/sonya-quote.png') center no-repeat;
+
+
 }
 .quote__text {
     background-color: #444444;
