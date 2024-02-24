@@ -1,6 +1,8 @@
+.contacts-wrapper {
+    background-color: var(--color-black);
+}
 .contacts {
     height: 445px;
-    background-color: var(--color-black);
     padding: 44px 202px 0;
     display: flex;
     flex-direction: column;
