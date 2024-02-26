@@ -1,0 +1,142 @@
+$card__margin-side: 1.5rem;
+$content__padding-top: 6rem; //96px
+$content__padding-side: 3rem; //48px
+$content__padding-bottom: 6.25rem; //100px
+$content__gap: 1.5rem;
+$header__font-size: 2rem;
+$body__font-size: 0.875rem;
+$img__width-desktop: 15rem; //not always..
+$img__height-desktop: 26.25rem;
+$image__gap-desktop: 1.375rem; //22px..
+$img__width-mobile: 12.3125rem; //198px
+$image__gap-mobile: 0.5rem;
+
+@mixin services-scale($factor) {
+    .services__card {
+        margin-inline: calc($factor * $card__margin-side);
+    }
+    .services__content {
+        padding: calc($factor * $content__padding-top) calc($factor * $content__padding-side) calc($factor * $content__padding-bottom);
+        gap: calc($factor * $content__gap);
+    }
+    .services__header {
+        font-size: calc($factor * $header__font-size);
+    }
+    .services__body {
+        .services__image {
+            font-size: calc($factor * $body__font-size);
+        }
+    }
+}
+
+.services {
+    max-width: 1440px;
+    margin-inline: auto;
+}
+.services__card {
+    margin-inline: $card__margin-side;
+    display: flex;
+}
+.services__content {
+    margin: 0 auto;
+    padding: $content__padding-top $content__padding-side $content__padding-bottom;
+    display: flex;
+    flex-direction: column;
+    gap: $content__gap;
+
+    font-family: IFKica, serif;
+    color: var(--color-black);
+}
+.services__header {
+    font-size: $header__font-size;
+    font-weight: bold;
+    text-align: right;
+}
+.services__body {
+    display: flex;
+    gap: $content__gap;
+}
+.services__image {
+    display: flex;
+    flex-direction: column;
+    gap: $image__gap-desktop;
+    font-size: $body__font-size;
+    font-weight: lighter;
+    text-align: right;
+    br#adapting {
+        display: none;
+    }
+    img {
+        width: $img__width-desktop;
+        height: $img__height-desktop;
+    }
+    //1 px border in colored ?
+    .services__image-1:hover { content: url("../../assets/images/services/colored/image-individual.png") }
+    .services__image-2:hover { content: url("../../assets/images/services/colored/image-katzen.png") }
+    .services__image-3:hover { content: url("../../assets/images/services/colored/image-family.png") }
+    .services__image-4:hover { content: url("../../assets/images/services/colored/image-content.png") }
+}
+@media (max-width: 1178px) { /* shrink all to 75% */
+    @include services-scale(0.75);
+    .services__body {
+        gap: calc(0.75 * $content__gap);
+        .services__image {
+            gap: calc(0.75 * $image__gap-desktop);
+        }
+        img {
+            width: calc(0.75 * $img__width-desktop);
+            height: calc(0.75 * $img__height-desktop);
+        }
+    }
+}
+@media (max-width: 884px) { /* shrink all to 50% */
+    @include services-scale(0.5);
+    .services__body {
+        gap: calc(0.5 * $content__gap);
+        .services__image {
+            gap: calc(0.5 * $image__gap-desktop);
+        }
+        img {
+            width: calc(0.5 * $img__width-desktop);
+            height: calc(0.5 * $img__height-desktop);
+        }
+    }
+}
+@media (max-width: 589px) { /* back to 75% + column */
+    @include services-scale(0.75);
+    .services__header {
+        text-align: left;
+    }
+    .services__body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: calc(0.75 * $content__gap);
+        .services__image {
+            gap: $image__gap-mobile;
+        }
+        br#adapting {
+            display: block;
+        }
+        img {
+            width: calc(0.75 * $img__width-mobile);
+            height: auto;
+        }
+        .services__image-1 { content: url("../../assets/images/services/colored/image-individual.png") }
+        .services__image-2 { content: url("../../assets/images/services/colored/image-katzen.png") }
+        .services__image-3 { content: url("../../assets/images/services/colored/image-family.png") }
+        .services__image-4 { content: url("../../assets/images/services/colored/image-content.png") }
+    }
+}
+@media (max-width: 422px) { /* actually 421.5px; shrink 50% */
+    @include services-scale(0.5);
+    .services__body {
+        .services__image {
+            gap: $image__gap-mobile;
+        }
+        grid-gap: calc(0.5 * $content__gap);
+        img {
+            width: calc(0.5 * $img__width-mobile);
+        }
+    }
+}
+@media (max-width: 316px) {}
