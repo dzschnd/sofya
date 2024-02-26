@@ -1,34 +1,34 @@
 {
   "files": {
-    "main.css": "/sofya/static/css/main.f733f322.css",
-    "main.js": "/sofya/static/js/main.48d75fa2.js",
+    "main.css": "/sofya/static/css/main.0424fb88.css",
+    "main.js": "/sofya/static/js/main.4250c54c.js",
     "static/media/sonya-welcome.png": "/sofya/static/media/sonya-welcome.55362990d562e36d146b.png",
     "static/media/sonya-quote.png": "/sofya/static/media/sonya-quote.9ceccd6de37cf8aedc10.png",
-    "static/media/sonya-about.png": "/sofya/static/media/sonya-about.4c4ec80bf6e83287e7ae.png",
     "static/media/image-8.png": "/sofya/static/media/image-8.d306b8380d4943f1636f.png",
-    "static/media/sonya-prices.png": "/sofya/static/media/sonya-prices.ee38d92eba3a9fcb0403.png",
+    "static/media/sonya-about.png": "/sofya/static/media/sonya-about.4c4ec80bf6e83287e7ae.png",
     "static/media/image-4.png": "/sofya/static/media/image-4.0c41a63097b29301cbf6.png",
-    "static/media/image-3.png": "/sofya/static/media/image-3.9dce378789e811a04cc5.png",
-    "static/media/image-6.png": "/sofya/static/media/image-6.969fed6ffc5f181c73ba.png",
-    "static/media/image-5.png": "/sofya/static/media/image-5.43df6688b495ee7e6506.png",
-    "static/media/image-1.png": "/sofya/static/media/image-1.102b3584df1cc1c463a9.png",
     "static/media/image-2.png": "/sofya/static/media/image-2.b3aa9399aaaaada2b8bb.png",
+    "static/media/image-3.png": "/sofya/static/media/image-3.9dce378789e811a04cc5.png",
+    "static/media/image-1.png": "/sofya/static/media/image-1.102b3584df1cc1c463a9.png",
+    "static/media/image-5.png": "/sofya/static/media/image-5.43df6688b495ee7e6506.png",
+    "static/media/image-6.png": "/sofya/static/media/image-6.969fed6ffc5f181c73ba.png",
     "static/media/image-7.png": "/sofya/static/media/image-7.3569a0d8a714602d5846.png",
     "static/media/image-individual.png": "/sofya/static/media/image-individual.124efe57633b04559926.png",
-    "static/media/image-family.png": "/sofya/static/media/image-family.18637431081471a85470.png",
+    "static/media/image-family.png": "/sofya/static/media/image-family.f46334d5ca31fc78f95e.png",
+    "static/media/image-content.png": "/sofya/static/media/image-content.18637431081471a85470.png",
     "static/media/image-9.png": "/sofya/static/media/image-9.38e0310605f3cc96f925.png",
-    "static/media/image-content.png": "/sofya/static/media/image-content.f46334d5ca31fc78f95e.png",
+    "static/media/image-katzen.png": "/sofya/static/media/image-katzen.3e9086ef32c2e5a69141.png",
+    "static/media/sonya-prices.png": "/sofya/static/media/sonya-prices.ee38d92eba3a9fcb0403.png",
     "static/media/IFKica-Bold.ttf": "/sofya/static/media/IFKica-Bold.33efc0e3f0813ef9f55f.ttf",
     "static/media/RozoviiChulok.ttf": "/sofya/static/media/RozoviiChulok.9a4afd7cae2a20b3e9d6.ttf",
     "static/media/IFKica-Regular.ttf": "/sofya/static/media/IFKica-Regular.fd2bc673404dae9c6769.ttf",
     "static/media/IFKica-Light.ttf": "/sofya/static/media/IFKica-Light.b169c46f979726dc39c5.ttf",
-    "static/media/image-katzen.png": "/sofya/static/media/image-katzen.3e9086ef32c2e5a69141.png",
     "index.html": "/sofya/index.html",
-    "main.f733f322.css.map": "/sofya/static/css/main.f733f322.css.map",
-    "main.48d75fa2.js.map": "/sofya/static/js/main.48d75fa2.js.map"
+    "main.0424fb88.css.map": "/sofya/static/css/main.0424fb88.css.map",
+    "main.4250c54c.js.map": "/sofya/static/js/main.4250c54c.js.map"
   },
   "entrypoints": [
-    "static/css/main.f733f322.css",
-    "static/js/main.48d75fa2.js"
+    "static/css/main.0424fb88.css",
+    "static/js/main.4250c54c.js"
   ]
 }
