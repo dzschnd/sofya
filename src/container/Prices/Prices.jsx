@@ -1,32 +1,36 @@
 import React from 'react';
 
-import './Prices.css';
+import './Prices.scss';
 
 const Prices = () => (
     <div className='prices'>
-        <div className='prices__header'>Праис</div>
-        <div className='prices__content'>
-            <img src={require('../../assets/images/sonya-prices.png')} alt=''/>
-            <div className='card__info'>
-                <div className='card__info-header'>
-                    Фйксйрованная цена
-                </div>
-                <div className='card__info-subheader'>
-                    на все виды фотосессий
-                </div>
-                <ul className='card__info-list'>
-                    <li><span>до 1,5 часов съемкй</span></li>
-                    <li><span>Помощь в подборе локацйй й образа</span></li>
-                    <li><span>от 60 кадров в цветокоррекцйй</span></li>
-                    <li><span>Готовые фотографйй в теченйе трех днеи</span></li>
-                </ul>
-                <div className='card__info-footer'>
-                    <div className='card__info-price'>
-                        4 500 р.
+        <div className='prices__card'>
+
+            <div className='prices__header'>Праис</div>
+
+            <div className='prices__body'>
+                <img className='prices__image' src={require('../../assets/images/sonya-prices.png')} alt=''/>
+                <div className='prices__info'>
+                    <div className='prices__info-header'>
+                        Фйксйрованная цена
                     </div>
-                    <button className='card__info-button'>
-                        Хочу съемку
-                    </button>
+                    <div className='prices__info-subheader'>
+                        на все виды фотосессий
+                    </div>
+                    <ul className='prices__info-list'>
+                        <li><span>до 1,5 часов съемкй</span></li>
+                        <li><span>Помощь в подборе локацйй й образа</span></li>
+                        <li><span>от 60 кадров в цветокоррекцйй</span></li>
+                        <li><span>Готовые фотографйй в теченйе трех днеи</span></li>
+                    </ul>
+                    <div className='prices__info-footer'>
+                        <div className='prices__info-price'>
+                            <span>4 500 р.</span>
+                        </div>
+                        <button className='prices__info-button'>
+                            Хочу съемку
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

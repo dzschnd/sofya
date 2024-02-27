@@ -10,7 +10,7 @@ const App = () => {
             <Info/>
             <Portfolio/>
             <Services/>
-            {/*<Prices/>*/}
+            <Prices/>
             {/*<Quote/>*/}
             {/*<QnA/>*/}
             {/*<Contacts/>*/}

@@ -1,0 +1,168 @@
+$margin: 1.5rem;
+$gap: 1.5rem;
+$card__padding-top: 5.25rem;
+$card__padding-side: 3rem;
+$card__padding-bottom: 6.25rem;
+$info__padding-top: 3.125rem;
+$info__padding-side: 5.1521875rem;
+$info__padding-bottom: 3.0625rem;
+$li__margin: 1.3125rem; //too much..
+$li__gap: -0.625rem;
+$footer__margin: 3.1875rem;
+$body__border: 0.0625rem;
+$header__font-size: 2rem;
+$subheader__font-size: 1.375rem;
+$list__font-size: 1.25rem;
+$button__font-size: 1.125;
+$image__width-desktop: 16.5625rem;
+$button__padding-top: 1.125rem;
+$button__padding-side: 2.75rem;
+
+@mixin prices-scale($factor) {
+  .prices {
+    margin: 0 calc($factor * $margin);
+  }
+  .prices__card {
+    padding: calc($factor * $card__padding-top) calc($factor * $card__padding-side) calc($factor * $card__padding-bottom);
+  }
+  .prices__header {
+    margin-bottom: calc($factor * $gap);
+    font-size: calc($factor * $header__font-size);
+  }
+  .prices__body {
+    border: calc($factor * $body__border) solid var(--color-black);
+  }
+  .prices__image {
+    width: calc($factor * $image__width-desktop);
+  }
+  .prices__info {
+    padding: calc($factor * $info__padding-top) calc($factor * $info__padding-side) calc($factor * $info__padding-bottom);
+  }
+  .prices__info-header {
+    font-size: calc($factor * $header__font-size);
+  }
+  .prices__info-subheader {
+    font-size: calc($factor * $subheader__font-size);
+  }
+  .prices__info-list {
+    font-size: calc($factor * $list__font-size);
+  }
+  .prices__info-list li {
+    margin-bottom: calc($factor * $li__margin);
+  }
+
+  .prices__info-list li span {
+    left: calc($factor * $li__gap);
+  }
+  .prices__info-footer {
+    margin-top: calc($factor * $footer__margin);
+  }
+  .prices__info-price {
+    font-size: calc($factor * $header__font-size);
+  }
+  .prices__info-button {
+    padding: calc($factor * $button__padding-top) calc($factor * $button__padding-side);
+    font-size: calc($factor * $button__font-size);
+  }
+}
+
+.prices {
+  margin: 0 $margin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.prices__card {
+  padding: $card__padding-top $card__padding-side $card__padding-bottom;
+}
+.prices__header {
+  margin-bottom: $gap;
+  font-family: IFKica, serif;
+  font-size: $header__font-size;
+  font-weight: bold;
+  color: var(--color-grey);
+  text-align: right;
+}
+.prices__body {
+  display: flex;
+  border: $body__border solid var(--color-black);
+}
+.prices__image {
+  width: $image__width-desktop;
+}
+.prices__info {
+  padding: $info__padding-top $info__padding-side $info__padding-bottom;
+}
+.prices__info-header {
+  font-family: IFKica, serif;
+  font-size: $header__font-size;
+  color: var(--color-grey);
+}
+.prices__info-subheader {
+  font-family: RozoviiChulok, serif;
+  font-size: $subheader__font-size;
+  color: var(--color-red);
+  text-align: right;
+}
+.prices__info-list {
+  font-family: IFKica, serif;
+  font-weight: lighter;
+  font-size: $list__font-size;
+  color: var(--color-grey);
+  list-style-position: inside;
+}
+.prices__info-list li {
+  margin-bottom: $li__margin;
+}
+
+.prices__info-list li span {
+  position: relative;
+  left: $li__gap;
+}
+.prices__info-footer {
+  margin-top: $footer__margin;
+  display: flex;
+  justify-content: space-between;
+}
+.prices__info-price {
+  font-family: IFKica, serif;
+  font-weight: bold;
+  font-size: $header__font-size;
+  color: var(--color-red);
+}
+
+.prices__info-button {
+  padding: $button__padding-top $button__padding-side;
+  border: none;
+  background-color: var(--color-red);
+  font-family: IFKica, serif;
+  font-weight: bold;
+  font-size: $button__font-size;
+  color: var(--color-white)
+}
+
+@media(max-width: 1176px) {
+  @include prices-scale(0.8);
+}
+@media(max-width: 941px) {
+  @include prices-scale(0.6);
+}
+@media(max-width: 705px) {
+  @include prices-scale(1);
+  .prices__body {
+    flex-direction: column-reverse;
+  }
+  .prices__info-footer {
+    flex-direction: column;
+  }
+}
+@media(max-width: 562px) {
+
+}
+@media(max-width: 449.6px) {
+
+}
+@media(max-width: 337.2px) {
+
+}
+

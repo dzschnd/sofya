@@ -1,4 +1,4 @@
-$margin: 4.5rem;
+$margin: 1.5rem;
 $gap: 1.5rem;
 $padding-top: 6rem;
 $padding-side: 3rem;
@@ -32,7 +32,7 @@ $image__width-mobile: 12.3125rem;
   align-items: center;
 
   font-family: IFKica, serif;
-  color: var(--color-black);
+  color: var(--color-grey);
 }
 .services__card {
   padding: $padding-top $padding-side $padding-bottom;
@@ -50,6 +50,11 @@ $image__width-mobile: 12.3125rem;
 .services__image, .services__image img{
   width: $image__width-desktop;
 }
+.services__image-1:hover { content: url("../../assets/images/services/colored/image-individual.png") }
+.services__image-2:hover { content: url("../../assets/images/services/colored/image-katzen.png") }
+.services__image-3:hover { content: url("../../assets/images/services/colored/image-family.png") }
+.services__image-4:hover { content: url("../../assets/images/services/colored/image-content.png") }
+
 .services__text {
   font-size: $text__font-size;
   font-weight: lighter;
@@ -80,6 +85,10 @@ $image__width-mobile: 12.3125rem;
   .services__image, .services__image img{
     width: calc($image__width-mobile);
   }
+  .services__image-1 { content: url("../../assets/images/services/colored/image-individual.png") }
+  .services__image-2 { content: url("../../assets/images/services/colored/image-katzen.png") }
+  .services__image-3 { content: url("../../assets/images/services/colored/image-family.png") }
+  .services__image-4 { content: url("../../assets/images/services/colored/image-content.png") }
 }
 @media(max-width: 562px) {
   @include services-scale(0.8);

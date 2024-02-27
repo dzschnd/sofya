@@ -55,15 +55,15 @@ $image__border: 0.0625rem;
   width: $image__width-desktop;
   border: $image__border solid var(--color-white);
 }
-.image-1:hover { content: url("../../assets/images/portfolio/colored/image-1.png") } /* bigger in figma, changed to 328x469 */
-.image-2:hover { content: url("../../assets/images/portfolio/colored/image-2.png") }
-.image-3:hover { content: url("../../assets/images/portfolio/colored/image-3.png") }
-.image-4:hover { content: url("../../assets/images/portfolio/colored/image-4.png") }
-.image-5:hover { content: url("../../assets/images/portfolio/colored/image-5.png") }
-.image-6:hover { content: url("../../assets/images/portfolio/colored/image-6.png") }
-.image-7:hover { content: url("../../assets/images/portfolio/colored/image-7.png") }
-.image-8:hover { content: url("../../assets/images/portfolio/colored/image-8.png") }
-.image-9:hover { content: url("../../assets/images/portfolio/colored/image-9.png") }
+.portfolio__image-1:hover { content: url("../../assets/images/portfolio/colored/image-1.png") } /* bigger in figma, changed to 328x469 */
+.portfolio__image-2:hover { content: url("../../assets/images/portfolio/colored/image-2.png") }
+.portfolio__image-3:hover { content: url("../../assets/images/portfolio/colored/image-3.png") }
+.portfolio__image-4:hover { content: url("../../assets/images/portfolio/colored/image-4.png") }
+.portfolio__image-5:hover { content: url("../../assets/images/portfolio/colored/image-5.png") }
+.portfolio__image-6:hover { content: url("../../assets/images/portfolio/colored/image-6.png") }
+.portfolio__image-7:hover { content: url("../../assets/images/portfolio/colored/image-7.png") }
+.portfolio__image-8:hover { content: url("../../assets/images/portfolio/colored/image-8.png") }
+.portfolio__image-9:hover { content: url("../../assets/images/portfolio/colored/image-9.png") }
 
 @media(max-width: 1176px) {
   @include info-scale(0.8);
@@ -79,9 +79,6 @@ $image__border: 0.0625rem;
 }
 @media(max-width: 705px) {
   @include info-scale(1);
-  .portfolio__header {
-    text-align: left;
-  }
   .portfolio__body {
     display: flex;
   }
