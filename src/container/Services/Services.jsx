@@ -1,31 +1,31 @@
 import React from 'react';
 
-import './Sevices.scss';
+import './Services.scss';
 
 const Services = () => (
     <div className='services'>
         <div className='services__card'>
-        <div className='services__content'>
-            <div className='services__header'>Услугй</div>
+            <div className='services__header'>
+                Услугй
+            </div>
             <div className='services__body'>
                 <div className='services__image'>
-                    <img className='services__image-1' src={require('../../assets/images/services/black-n-white/image-individual.png')}/>
-                    <span>Индйвйдуальная<br/>съемка</span>
+                    <img className='image-1' src={require('../../assets/images/services/black-n-white/image-individual.png')} alt=''/>
+                    <div className='services__text'>Индйвйдуальная<br/>съемка</div>
                 </div>
                 <div className='services__image'>
-                    <img className='services__image-2' src={require('../../assets/images/services/black-n-white/image-katzen.png')}/>
-                    <span>Парная<br id='adapting'/> съемка</span>
+                    <img className='image-2' src={require('../../assets/images/services/black-n-white/image-katzen.png')} alt=''/>
+                    <div className='services__text'>Парная<br/>съемка</div>
                 </div>
                 <div className='services__image'>
-                    <img className='services__image-3' src={require('../../assets/images/services/black-n-white/image-family.png')}/>
-                    <span>Семеиная<br id='adapting'/> съемка</span>
+                    <img className='image-3' src={require('../../assets/images/services/black-n-white/image-family.png')} alt=''/>
+                    <div className='services__text'>Семеиная<br/> съемка</div>
                 </div>
                 <div className='services__image'>
-                    <img className='services__image-4' src={require('../../assets/images/services/black-n-white/image-content.png')}/>
-                    <span>Контент-<br id='adapting'/>съемка</span>
+                    <img className='image-4' src={require('../../assets/images/services/black-n-white/image-content.png')} alt=''/>
+                    <div className='services__text'>Контент-<br/>съемка</div>
                 </div>
             </div>
-        </div>
         </div>
     </div>
 );

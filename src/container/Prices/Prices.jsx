@@ -4,9 +4,9 @@ import './Prices.css';
 
 const Prices = () => (
     <div className='prices'>
-        <div className='prices__title'>Праис</div>
+        <div className='prices__header'>Праис</div>
         <div className='prices__content'>
-            <img src={require('../../assets/images/sonya-prices.png')}/>
+            <img src={require('../../assets/images/sonya-prices.png')} alt=''/>
             <div className='card__info'>
                 <div className='card__info-header'>
                     Фйксйрованная цена

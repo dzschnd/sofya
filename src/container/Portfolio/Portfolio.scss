@@ -1,125 +1,119 @@
-$card__margin-side: 1.5rem;
-$content__padding-top: 3.125rem; //50px
-$content__padding-side: 3rem; //48px
-$content__padding-bottom: 6.4375rem; //103px
-$content__gap: 1.5rem;
+$margin: 1.5rem;
+$gap: 1.5rem;
+$padding-top: 3.125rem;
+$padding-side: 3rem;
+$padding-bottom: 6.4375rem;
 $header__font-size: 2rem;
-$grid-gap: 1.5rem;
-$img__width-grid: 20.5rem;
-$img__height-grid: 29.3125rem;
-$img__width-carousel: 26.125rem;
-$img__border: 0.0625rem;
-
-@mixin portfolio__scale-common($factor) {
-    .portfolio__card {
-        margin: 0 calc($factor * $card__margin-side);
-    }
-    .portfolio__content {
-        padding: calc($factor * $content__padding-top)
-        calc($factor * $content__padding-side)
-        calc($factor * $content__padding-bottom);
-        gap: calc($factor * $content__gap);
-    }
-    .portfolio__header {
-        font-size: calc($factor * $header__font-size);
-    }
+$text__font-size: 1rem;
+$image__width-desktop: 20.5rem;
+$image__width-mobile: 26.125rem;
+$image__border: 0.0625rem;
+@mixin info-scale($factor) {
+  .portfolio {
+    margin: 0 calc($factor * $gap);
+  }
+  .portfolio__card {
+    padding: calc($factor * $padding-top) calc($factor * $padding-side) calc($factor * $padding-bottom);
+  }
+  .portfolio__header {
+    margin-bottom: calc($factor * $gap);
+    font-size: calc($factor * $header__font-size);
+  }
+  .portfolio__body {
+    grid-gap: calc($factor * $gap);
+  }
+  .portfolio__image {
+    border: $image__border solid var(--color-white);
+  }
 }
-@mixin portfolio__scale-mobile($factor) {
-    @include portfolio__scale-common($factor);
-    .header {
-        text-align: left; //not working..
-    }
-    .portfolio__body { //add carousel later
-        display: block;
-        .portfolio__image-1 { display: none; content: url("../../assets/images/portfolio/colored/image-1.png") } /* bigger in figma, changed to 328x469 */
-        .portfolio__image-2 { display: none; content: url("../../assets/images/portfolio/colored/image-2.png") }
-        .portfolio__image-3 { display: none; content: url("../../assets/images/portfolio/colored/image-3.png") }
-        .portfolio__image-4 { display: none; content: url("../../assets/images/portfolio/colored/image-4.png") }
-        .portfolio__image-5 { display: none; content: url("../../assets/images/portfolio/colored/image-5.png") }
-        .portfolio__image-6 { display: none; content: url("../../assets/images/portfolio/colored/image-6.png") }
-        .portfolio__image-7 {                content: url("../../assets/images/portfolio/colored/image-7.png") }
-        .portfolio__image-8 { display: none; content: url("../../assets/images/portfolio/colored/image-8.png") }
-        .portfolio__image-9 { display: none; content: url("../../assets/images/portfolio/colored/image-9.png") }
-        img {
-            width: calc($factor * $img__width-carousel);
-            height: auto;
-            border: calc($factor * $img__border) solid var(--color-white);
-        }
-    }
-}
-@mixin portfolio__scale-desktop($factor) {
-    @include portfolio__scale-common($factor);
-    .portfolio__body {
-        grid-gap: calc($factor * $grid-gap);
-        img {
-            width: calc($factor * $img__width-grid);
-            height: calc($factor * $img__height-grid);
-            border: calc($factor * $img__border) solid var(--color-white);
-        }
-    }
-}
-
 .portfolio {
-    max-width: 1440px;
-    margin: 0 auto;
+  margin: 0 $gap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .portfolio__card {
-    margin-inline: $card__margin-side;
-    display: flex;
-
-    border-bottom-left-radius: 1.875rem;
-    border-bottom-right-radius: 1.875rem;
-    background-color: var(--color-black);
-}
-.portfolio__content {
-    margin: 0 auto;
-    padding: $content__padding-top $content__padding-side $content__padding-bottom;
-
-    display: flex;
-    flex-direction: column;
-    gap: $content__gap;
-
-    font-family: IFKica, serif;
-    color: var(--color-white);
+  padding: $padding-top $padding-side $padding-bottom;
+  border-bottom-left-radius: 1.875rem;
+  border-bottom-right-radius: 1.875rem;
+  background-color: var(--color-black);
 }
 .portfolio__header {
-    font-weight: bold;
-    font-size: $header__font-size;
-    text-align: right;
+  margin-bottom: $gap;
+  font-family: IFKica, serif;
+  font-size: $header__font-size;
+  font-weight: bold;
+  color: var(--color-white);
+  text-align: right;
 }
-
 .portfolio__body {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: $grid-gap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: $gap;
+}
+.portfolio__image {
+  width: $image__width-desktop;
+  border: $image__border solid var(--color-white);
+}
+.image-1:hover { content: url("../../assets/images/portfolio/colored/image-1.png") } /* bigger in figma, changed to 328x469 */
+.image-2:hover { content: url("../../assets/images/portfolio/colored/image-2.png") }
+.image-3:hover { content: url("../../assets/images/portfolio/colored/image-3.png") }
+.image-4:hover { content: url("../../assets/images/portfolio/colored/image-4.png") }
+.image-5:hover { content: url("../../assets/images/portfolio/colored/image-5.png") }
+.image-6:hover { content: url("../../assets/images/portfolio/colored/image-6.png") }
+.image-7:hover { content: url("../../assets/images/portfolio/colored/image-7.png") }
+.image-8:hover { content: url("../../assets/images/portfolio/colored/image-8.png") }
+.image-9:hover { content: url("../../assets/images/portfolio/colored/image-9.png") }
 
-    .portfolio__image-1:hover { content: url("../../assets/images/portfolio/colored/image-1.png") } /* bigger in figma, changed to 328x469 */
-    .portfolio__image-2:hover { content: url("../../assets/images/portfolio/colored/image-2.png") }
-    .portfolio__image-3:hover { content: url("../../assets/images/portfolio/colored/image-3.png") }
-    .portfolio__image-4:hover { content: url("../../assets/images/portfolio/colored/image-4.png") }
-    .portfolio__image-5:hover { content: url("../../assets/images/portfolio/colored/image-5.png") }
-    .portfolio__image-6:hover { content: url("../../assets/images/portfolio/colored/image-6.png") }
-    .portfolio__image-7:hover { content: url("../../assets/images/portfolio/colored/image-7.png") }
-    .portfolio__image-8:hover { content: url("../../assets/images/portfolio/colored/image-8.png") }
-    .portfolio__image-9:hover { content: url("../../assets/images/portfolio/colored/image-9.png") }
+@media(max-width: 1176px) {
+  @include info-scale(0.8);
+  .portfolio__image {
+    width: calc(0.8 * $image__width-desktop);
+  }
+}
+@media(max-width: 941px) {
+  @include info-scale(0.6);
+  .portfolio__image {
+    width: calc(0.6 * $image__width-desktop);
+  }
+}
+@media(max-width: 705px) {
+  @include info-scale(1);
+  .portfolio__header {
+    text-align: left;
+  }
+  .portfolio__body {
+    display: flex;
+  }
+  .portfolio__image {
+    width: $image__width-mobile;
+  }
+  .image-1 {display: none; content: url("../../assets/images/portfolio/colored/image-1.png") }
+  .image-2 {display: none; content: url("../../assets/images/portfolio/colored/image-2.png") }
+  .image-3 {display: none; content: url("../../assets/images/portfolio/colored/image-3.png") }
+  .image-4 {display: none; content: url("../../assets/images/portfolio/colored/image-4.png") }
+  .image-5 {display: none; content: url("../../assets/images/portfolio/colored/image-5.png") }
+  .image-6 {display: none; content: url("../../assets/images/portfolio/colored/image-6.png") }
+  .image-7 {               content: url("../../assets/images/portfolio/colored/image-7.png") }
+  .image-8 {display: none; content: url("../../assets/images/portfolio/colored/image-8.png") }
+  .image-9 {display: none; content: url("../../assets/images/portfolio/colored/image-9.png") }
+}
+@media(max-width: 562px) {
+  @include info-scale(0.8);
+  .portfolio__image {
+    width: calc(0.8 * $image__width-mobile);
+  }
+}
+@media(max-width: 449.6px) {
+  @include info-scale(0.6);
+  .portfolio__image {
+    width: calc(0.6 * $image__width-mobile);
+  }
+}
+@media(max-width: 337.2px) {
+  @include info-scale(0.4);
+  .portfolio__image {
+    width: calc(0.4 * $image__width-mobile);
+  }
+}
 
-    img {
-        width: $img__width-grid;
-        height: $img__height-grid;
-        border: $img__border solid var(--color-white);
-    }
-}
-@media (max-width: 1178px) { /* shrink all to 75% */
-    @include portfolio__scale-desktop(0.75);
-}
-
-@media (max-width: 884px) { /* shrink all to 50% */
-    @include portfolio__scale-desktop(0.5);
-}
-@media (max-width: 589px) { /* back to 75% + column */
-    @include portfolio__scale-mobile(0.75);
-}
-@media (max-width: 422px) { /* actually 421.5px; shrink 50% */
-    @include portfolio__scale-mobile(0.5);
-}
-@media (max-width: 316px) {}

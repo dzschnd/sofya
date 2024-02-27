@@ -1,0 +1,103 @@
+$margin: 4.5rem;
+$gap: 1.5rem;
+$padding-top: 6rem;
+$padding-side: 3rem;
+$padding-bottom: 6.25rem;
+$header__font-size: 2rem;
+$text__font-size: 0.875rem;
+$image__width-desktop: 15rem;
+$image__width-mobile: 12.3125rem;
+@mixin services-scale($factor) {
+  .services {
+    margin: 0 calc($factor * $margin);
+  }
+  .services__card {
+    padding: calc($factor * $padding-top) calc($factor * $padding-side) calc($factor * $padding-bottom);
+  }
+  .services__header {
+    margin-bottom: calc($factor * $gap);
+    font-size: calc($factor * $header__font-size);
+  }
+  .services__body {
+    gap: calc($factor * $gap);
+  }
+  .services__text {
+    font-size: calc($factor * $text__font-size);
+  }
+}
+.services {
+  margin: 0 $margin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: IFKica, serif;
+  color: var(--color-black);
+}
+.services__card {
+  padding: $padding-top $padding-side $padding-bottom;
+}
+.services__header {
+  margin-bottom: $gap;
+  font-size: $header__font-size;
+  font-weight: bold;
+  text-align: right;
+}
+.services__body {
+  display: flex;
+  gap: $gap;
+}
+.services__image, .services__image img{
+  width: $image__width-desktop;
+}
+.services__text {
+  font-size: $text__font-size;
+  font-weight: lighter;
+  text-align: right;
+}
+
+@media(max-width: 1176px) {
+  @include services-scale(0.8);
+  .services__image, .services__image img{
+    width: calc(0.8 * $image__width-desktop);
+  }
+}
+@media(max-width: 941px) {
+  @include services-scale(0.6);
+  .services__image, .services__image img{
+    width: calc(0.6 * $image__width-desktop);
+  }
+}
+@media(max-width: 705px) {
+  @include services-scale(1);
+  .services__header {
+    text-align: left;
+  }
+  //images disappearing...
+  .services__body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .services__image, .services__image img{
+    width: calc($image__width-mobile);
+  }
+}
+@media(max-width: 562px) {
+  @include services-scale(0.8);
+  .services__image, .services__image img{
+    width: calc(0.8 * $image__width-mobile);
+  }
+}
+@media(max-width: 449.6px) {
+  @include services-scale(0.6);
+  .services__image, .services__image img{
+    width: calc(0.6 * $image__width-mobile);
+  }
+}
+@media(max-width: 337.2px) {
+  @include services-scale(0.4);
+  .services__image, .services__image img{
+    width: calc(0.4 * $image__width-mobile);
+  }
+}
+
