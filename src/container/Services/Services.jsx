@@ -10,19 +10,19 @@ const Services = () => (
             </div>
             <div className='services__body'>
                 <div className='services__image'>
-                    <img className='image-1' src={require('../../assets/images/services/black-n-white/image-individual.png')} alt=''/>
+                    <img className='services__image-1' src={require('../../assets/images/services/black-n-white/image-individual.png')} alt=''/>
                     <div className='services__text'>Индйвйдуальная<br/>съемка</div>
                 </div>
                 <div className='services__image'>
-                    <img className='image-2' src={require('../../assets/images/services/black-n-white/image-katzen.png')} alt=''/>
+                    <img className='services__image-2' src={require('../../assets/images/services/black-n-white/image-katzen.png')} alt=''/>
                     <div className='services__text'>Парная<br/>съемка</div>
                 </div>
                 <div className='services__image'>
-                    <img className='image-3' src={require('../../assets/images/services/black-n-white/image-family.png')} alt=''/>
+                    <img className='services__image-3' src={require('../../assets/images/services/black-n-white/image-family.png')} alt=''/>
                     <div className='services__text'>Семеиная<br/> съемка</div>
                 </div>
                 <div className='services__image'>
-                    <img className='image-4' src={require('../../assets/images/services/black-n-white/image-content.png')} alt=''/>
+                    <img className='services__image-4' src={require('../../assets/images/services/black-n-white/image-content.png')} alt=''/>
                     <div className='services__text'>Контент-<br/>съемка</div>
                 </div>
             </div>
