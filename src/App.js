@@ -8,9 +8,9 @@ const App = () => {
         <div className='app'>
             {/*<Main/>*/}
             <Info/>
-            <Portfolio/>
-            <Services/>
-            <Prices/>
+            {/*<Portfolio/>*/}
+            {/*<Services/>*/}
+            {/*<Prices/>*/}
             {/*<Quote/>*/}
             {/*<QnA/>*/}
             {/*<Contacts/>*/}

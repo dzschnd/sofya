@@ -4,7 +4,6 @@ import './Prices.scss';
 
 const Prices = () => (
     <div className='prices'>
-        <div className='prices__card'>
 
             <div className='prices__header'>Праис</div>
 
@@ -33,7 +32,6 @@ const Prices = () => (
                     </div>
                 </div>
             </div>
-        </div>
     </div>
 );
 

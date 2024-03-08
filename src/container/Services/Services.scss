@@ -1,59 +1,53 @@
-$margin: 1.5rem;
-$gap: 1.5rem;
-$padding-top: 6rem;
-$padding-side: 3rem;
-$padding-bottom: 6.25rem;
+$card__padding-top: 6rem;
+$card__padding-side: 4.5rem;
+$card__padding-bottom: 6.25rem;
+
+$header__margin-bottom: 1.5rem;
+$body__gap: 1.5rem;
+
 $header__font-size: 2rem;
 $text__font-size: 0.875rem;
+
 $image__width-desktop: 15rem;
 $image__width-mobile: 12.3125rem;
+
 @mixin services-scale($factor) {
   .services {
-    margin: 0 calc($factor * $margin);
+    padding: calc($factor * $card__padding-top) calc($factor * $card__padding-side) calc($factor * $card__padding-bottom);
   }
-  .services__card {
-    padding: calc($factor * $padding-top) calc($factor * $padding-side) calc($factor * $padding-bottom);
-  }
+
   .services__header {
-    margin-bottom: calc($factor * $gap);
+    margin-bottom: calc($factor * $header__margin-bottom);
     font-size: calc($factor * $header__font-size);
   }
   .services__body {
-    gap: calc($factor * $gap);
+    gap: calc($factor * $body__gap);
   }
+
   .services__text {
     font-size: calc($factor * $text__font-size);
   }
 }
 .services {
-  margin: 0 $margin;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 1176px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: $card__padding-top $card__padding-side $card__padding-bottom;
 
   font-family: IFKica, serif;
   color: var(--color-grey);
 }
-.services__card {
-  padding: $padding-top $padding-side $padding-bottom;
-}
+
 .services__header {
-  margin-bottom: $gap;
+  margin-bottom: $header__margin-bottom;
   font-size: $header__font-size;
   font-weight: bold;
   text-align: right;
 }
 .services__body {
+  gap: $body__gap;
   display: flex;
-  gap: $gap;
 }
-.services__image, .services__image img{
-  width: $image__width-desktop;
-}
-.services__image-1:hover { content: url("../../assets/images/services/colored/image-individual.png") }
-.services__image-2:hover { content: url("../../assets/images/services/colored/image-katzen.png") }
-.services__image-3:hover { content: url("../../assets/images/services/colored/image-family.png") }
-.services__image-4:hover { content: url("../../assets/images/services/colored/image-content.png") }
 
 .services__text {
   font-size: $text__font-size;
@@ -61,20 +55,26 @@ $image__width-mobile: 12.3125rem;
   text-align: right;
 }
 
+.services__image-1:hover { content: url("../../assets/images/services/colored/image-individual.png") }
+.services__image-2:hover { content: url("../../assets/images/services/colored/image-katzen.png") }
+.services__image-3:hover { content: url("../../assets/images/services/colored/image-family.png") }
+.services__image-4:hover { content: url("../../assets/images/services/colored/image-content.png") }
+
 @media(max-width: 1176px) {
+  .services {max-width: 941px;}
   @include services-scale(0.8);
-  .services__image, .services__image img{
-    width: calc(0.8 * $image__width-desktop);
-  }
+  .services__image img {width: calc(0.8 * $image__width-desktop);}
 }
 @media(max-width: 941px) {
+  .services {max-width: 705px;}
   @include services-scale(0.6);
-  .services__image, .services__image img{
-    width: calc(0.6 * $image__width-desktop);
-  }
+  .services__image img {width: calc(0.6 * $image__width-desktop);}
 }
 @media(max-width: 705px) {
+  .services {max-width: 562px;}
   @include services-scale(1);
+  .services__image img {width: $image__width-mobile;}
+
   .services__header {
     text-align: left;
   }
@@ -82,27 +82,33 @@ $image__width-mobile: 12.3125rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  .services__image, .services__image img{
-    width: calc($image__width-mobile);
-  }
   .services__image-1 { content: url("../../assets/images/services/colored/image-individual.png") }
   .services__image-2 { content: url("../../assets/images/services/colored/image-katzen.png") }
   .services__image-3 { content: url("../../assets/images/services/colored/image-family.png") }
   .services__image-4 { content: url("../../assets/images/services/colored/image-content.png") }
 }
 @media(max-width: 562px) {
+  .services {
+    max-width: 449.6px;
+  }
   @include services-scale(0.8);
-  .services__image, .services__image img{
+  .services__image img{
     width: calc(0.8 * $image__width-mobile);
   }
 }
 @media(max-width: 449.6px) {
+  .services {
+    max-width: 337.2px;
+  }
   @include services-scale(0.6);
-  .services__image, .services__image img{
+  .services__image img{
     width: calc(0.6 * $image__width-mobile);
   }
 }
 @media(max-width: 337.2px) {
+  .services {
+    max-width: 280px; //например
+  }
   @include services-scale(0.4);
   .services__image, .services__image img{
     width: calc(0.4 * $image__width-mobile);

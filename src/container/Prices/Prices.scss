@@ -1,33 +1,32 @@
-$margin: 1.5rem;
-$gap: 1.5rem;
 $card__padding-top: 5.25rem;
-$card__padding-side: 3rem;
+$card__padding-side: 4.5rem;
 $card__padding-bottom: 6.25rem;
-$info__padding-top: 3.125rem;
-$info__padding-side: 5.1521875rem;
-$info__padding-bottom: 3.0625rem;
-$li__margin: 1.3125rem; //too much..
-$li__gap: -0.625rem;
-$footer__margin: 3.1875rem;
+
+$header__margin-bottom: 1.5rem;
+$footer__margin-top: 3.1875rem;
+
 $body__border: 0.0625rem;
-$header__font-size: 2rem;
+
+$image__width-desktop: 16.5625rem;
+
+$header__font-size: 2rem; //можно ли использовать <h1>??
 $subheader__font-size: 1.375rem;
 $list__font-size: 1.25rem;
-$button__font-size: 1.125;
-$image__width-desktop: 16.5625rem;
+
+$li__margin: 0.35rem;
+$li__bullet-gap: -0.625rem;
+$footer__gap: 12.5rem;
+
+$button__font-size: 1.125rem;
 $button__padding-top: 1.125rem;
 $button__padding-side: 2.75rem;
 
 @mixin prices-scale($factor) {
   .prices {
-    margin: 0 calc($factor * $margin);
-  }
-  .prices__card {
     padding: calc($factor * $card__padding-top) calc($factor * $card__padding-side) calc($factor * $card__padding-bottom);
   }
   .prices__header {
-    margin-bottom: calc($factor * $gap);
-    font-size: calc($factor * $header__font-size);
+    margin-bottom: calc($factor * $header__margin-bottom);
   }
   .prices__body {
     border: calc($factor * $body__border) solid var(--color-black);
@@ -35,10 +34,20 @@ $button__padding-side: 2.75rem;
   .prices__image {
     width: calc($factor * $image__width-desktop);
   }
-  .prices__info {
-    padding: calc($factor * $info__padding-top) calc($factor * $info__padding-side) calc($factor * $info__padding-bottom);
+  .prices__info-list li {
+    margin-bottom: calc($factor * $li__margin);
+    span { left: calc($factor * $li__bullet-gap); }
   }
-  .prices__info-header {
+  .prices__info-button {
+    padding: calc($factor * $button__padding-top) calc($factor * $button__padding-side);
+    font-size: calc($factor * $button__font-size);
+  }
+  .prices__info-footer {
+    margin-top: calc($factor * $footer__margin-top);
+    gap: calc($factor * $footer__gap);
+  }
+
+  .prices__header, .prices__info-header, .prices__info-price {
     font-size: calc($factor * $header__font-size);
   }
   .prices__info-subheader {
@@ -47,107 +56,96 @@ $button__padding-side: 2.75rem;
   .prices__info-list {
     font-size: calc($factor * $list__font-size);
   }
-  .prices__info-list li {
-    margin-bottom: calc($factor * $li__margin);
-  }
-
-  .prices__info-list li span {
-    left: calc($factor * $li__gap);
-  }
-  .prices__info-footer {
-    margin-top: calc($factor * $footer__margin);
-  }
-  .prices__info-price {
-    font-size: calc($factor * $header__font-size);
-  }
-  .prices__info-button {
-    padding: calc($factor * $button__padding-top) calc($factor * $button__padding-side);
-    font-size: calc($factor * $button__font-size);
-  }
 }
 
 .prices {
-  margin: 0 $margin;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.prices__card {
+  max-width: 1176px;
+  margin-left: auto;
+  margin-right: auto;
   padding: $card__padding-top $card__padding-side $card__padding-bottom;
 }
 .prices__header {
-  margin-bottom: $gap;
-  font-family: IFKica, serif;
+  margin-bottom: $header__margin-bottom;
+
   font-size: $header__font-size;
-  font-weight: bold;
+  font-family: IFKica, serif;
   color: var(--color-grey);
+  font-weight: bold;
   text-align: right;
 }
-.prices__body {
-  display: flex;
+.prices__body { //height too big (borders)
   border: $body__border solid var(--color-black);
+  box-sizing: border-box;
+  display: flex;
 }
-.prices__image {
-  width: $image__width-desktop;
-}
+
 .prices__info {
-  padding: $info__padding-top $info__padding-side $info__padding-bottom;
+  margin: auto
 }
 .prices__info-header {
-  font-family: IFKica, serif;
   font-size: $header__font-size;
+
+  font-family: IFKica, serif;
   color: var(--color-grey);
 }
 .prices__info-subheader {
-  font-family: RozoviiChulok, serif;
   font-size: $subheader__font-size;
+
+  font-family: RozoviiChulok, serif;
   color: var(--color-red);
   text-align: right;
 }
 .prices__info-list {
-  font-family: IFKica, serif;
-  font-weight: lighter;
   font-size: $list__font-size;
+
+  font-family: IFKica, serif;
   color: var(--color-grey);
+  font-weight: lighter;
   list-style-position: inside;
 }
 .prices__info-list li {
   margin-bottom: $li__margin;
-}
-
-.prices__info-list li span {
-  position: relative;
-  left: $li__gap;
+  span {
+    position: relative;
+    left: $li__bullet-gap;
+  }
 }
 .prices__info-footer {
-  margin-top: $footer__margin;
+  margin-top: $footer__margin-top;
+  gap: $footer__gap;
   display: flex;
-  justify-content: space-between;
 }
 .prices__info-price {
-  font-family: IFKica, serif;
-  font-weight: bold;
   font-size: $header__font-size;
+  font-family: IFKica, serif;
   color: var(--color-red);
+  font-weight: bold;
+  display: table;
+  span {
+    display: table-cell;
+    vertical-align: middle;
+  }
 }
-
 .prices__info-button {
   padding: $button__padding-top $button__padding-side;
   border: none;
   background-color: var(--color-red);
   font-family: IFKica, serif;
+  color: var(--color-white);
   font-weight: bold;
   font-size: $button__font-size;
-  color: var(--color-white)
 }
 
 @media(max-width: 1176px) {
+  .prices { max-width: 941px; }
   @include prices-scale(0.8);
 }
 @media(max-width: 941px) {
+  .prices { max-width: 705px; }
   @include prices-scale(0.6);
 }
 @media(max-width: 705px) {
+  .prices { max-width: 562px; }
   @include prices-scale(1);
   .prices__body {
     flex-direction: column-reverse;
@@ -157,12 +155,9 @@ $button__padding-side: 2.75rem;
   }
 }
 @media(max-width: 562px) {
-
 }
 @media(max-width: 449.6px) {
-
 }
 @media(max-width: 337.2px) {
-
 }
 
