@@ -1,0 +1,15 @@
+
+.card {
+  max-width: 1392px;
+  width: min(1392px, 100% - 3rem);
+  margin-inline: auto;
+  background-color: var(--color-white);
+}
+.content {
+  max-width: 1032px;
+  width: min(1032px, 100% - 22.385rem);
+  margin-inline: auto;
+}
+main {
+  display: flex;
+}
