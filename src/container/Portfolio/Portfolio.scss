@@ -1,116 +1,70 @@
-$margin: 1.5rem;
-$gap: 1.5rem;
-$padding-top: 3.125rem;
-$padding-side: 3rem;
-$padding-bottom: 6.4375rem;
-$header__font-size: 2rem;
-$text__font-size: 1rem;
-$image__width-desktop: 20.5rem;
-$image__width-mobile: 26.125rem;
-$image__border: 0.0625rem;
-@mixin info-scale($factor) {
-  .portfolio {
-    margin: 0 calc($factor * $gap);
-  }
-  .portfolio__card {
-    padding: calc($factor * $padding-top) calc($factor * $padding-side) calc($factor * $padding-bottom);
-  }
-  .portfolio__header {
-    margin-bottom: calc($factor * $gap);
-    font-size: calc($factor * $header__font-size);
-  }
-  .portfolio__body {
-    grid-gap: calc($factor * $gap);
-  }
-  .portfolio__image {
-    border: $image__border solid var(--color-white);
-  }
-}
 .portfolio {
-  margin: 0 $gap;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.portfolio__card {
-  padding: $padding-top $padding-side $padding-bottom;
-  border-bottom-left-radius: 1.875rem;
-  border-bottom-right-radius: 1.875rem;
-  background-color: var(--color-black);
-}
-.portfolio__header {
-  margin-bottom: $gap;
-  font-family: IFKica, serif;
-  font-size: $header__font-size;
-  font-weight: bold;
-  color: var(--color-white);
-  text-align: right;
+  padding-block: 50px 103px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  transform: translateY(-32px);
 }
 .portfolio__body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: $gap;
+  gap: 24px;
 }
 .portfolio__image {
-  width: $image__width-desktop;
-  border: $image__border solid var(--color-white);
+  margin-inline: auto;
 }
-.portfolio__image-1:hover { content: url("../../assets/images/portfolio/colored/image-1.png") } /* bigger in figma, changed to 328x469 */
-.portfolio__image-2:hover { content: url("../../assets/images/portfolio/colored/image-2.png") }
-.portfolio__image-3:hover { content: url("../../assets/images/portfolio/colored/image-3.png") }
-.portfolio__image-4:hover { content: url("../../assets/images/portfolio/colored/image-4.png") }
-.portfolio__image-5:hover { content: url("../../assets/images/portfolio/colored/image-5.png") }
-.portfolio__image-6:hover { content: url("../../assets/images/portfolio/colored/image-6.png") }
-.portfolio__image-7:hover { content: url("../../assets/images/portfolio/colored/image-7.png") }
-.portfolio__image-8:hover { content: url("../../assets/images/portfolio/colored/image-8.png") }
-.portfolio__image-9:hover { content: url("../../assets/images/portfolio/colored/image-9.png") }
+@media (min-width: 912px){
+  .portfolio__image-1:hover { content: url("../../assets/images/portfolio/colored/image-1.png") }
+  .portfolio__image-2:hover { content: url("../../assets/images/portfolio/colored/image-2.png") }
+  .portfolio__image-3:hover { content: url("../../assets/images/portfolio/colored/image-3.png") }
+  .portfolio__image-4:hover { content: url("../../assets/images/portfolio/colored/image-4.png") }
+  .portfolio__image-5:hover { content: url("../../assets/images/portfolio/colored/image-5.png") }
+  .portfolio__image-6:hover { content: url("../../assets/images/portfolio/colored/image-9.png") }
+  .portfolio__image-7:hover { content: url("../../assets/images/portfolio/colored/image-7.png") }
+  .portfolio__image-8:hover { content: url("../../assets/images/portfolio/colored/image-8.png") }
+  .portfolio__image-9:hover { content: url("../../assets/images/portfolio/colored/image-6.png") }
+}
 
-@media(max-width: 1176px) {
-  @include info-scale(0.8);
-  .portfolio__image {
-    width: calc(0.8 * $image__width-desktop);
-  }
-}
-@media(max-width: 941px) {
-  @include info-scale(0.6);
-  .portfolio__image {
-    width: calc(0.6 * $image__width-desktop);
-  }
-}
-@media(max-width: 705px) {
-  @include info-scale(1);
+@media (max-width: 911px) {
   .portfolio__body {
-    display: flex;
+    grid-template-columns: 1fr 1fr;
   }
-  .portfolio__image {
-    width: $image__width-mobile;
-  }
-  .portfolio__image-1 {display: none; content: url("../../assets/images/portfolio/colored/image-1.png") }
-  .portfolio__image-2 {display: none; content: url("../../assets/images/portfolio/colored/image-2.png") }
-  .portfolio__image-3 {display: none; content: url("../../assets/images/portfolio/colored/image-3.png") }
-  .portfolio__image-4 {display: none; content: url("../../assets/images/portfolio/colored/image-4.png") }
-  .portfolio__image-5 {display: none; content: url("../../assets/images/portfolio/colored/image-5.png") }
-  .portfolio__image-6 {display: none; content: url("../../assets/images/portfolio/colored/image-6.png") }
-  .portfolio__image-7 {               content: url("../../assets/images/portfolio/colored/image-7.png") }
-  .portfolio__image-8 {display: none; content: url("../../assets/images/portfolio/colored/image-8.png") }
-  .portfolio__image-9 {display: none; content: url("../../assets/images/portfolio/colored/image-9.png") }
+  .portfolio__image-1 { content: url("../../assets/images/portfolio/colored-wide/image-1.png") }
+  .portfolio__image-2 { content: url("../../assets/images/portfolio/colored-wide/image-2.png") }
+  .portfolio__image-3 { content: url("../../assets/images/portfolio/colored-wide/image-3.png") }
+  .portfolio__image-4 { content: url("../../assets/images/portfolio/colored-wide/image-4.png") }
+  .portfolio__image-5 { content: url("../../assets/images/portfolio/colored-wide/image-5.png") }
+  .portfolio__image-6 { content: url("../../assets/images/portfolio/colored-wide/image-6.png") }
+  .portfolio__image-7 { content: url("../../assets/images/portfolio/colored-wide/image-7.png") }
+  .portfolio__image-8 { content: url("../../assets/images/portfolio/colored-wide/image-8.png") }
+  .portfolio__image-9 { content: url("../../assets/images/portfolio/colored-wide/image-9.png") }
+  .portfolio__image-10 { content: url("../../assets/images/portfolio/colored-wide/image-10.png") }
 }
-@media(max-width: 562px) {
-  @include info-scale(0.8);
-  .portfolio__image {
-    width: calc(0.8 * $image__width-mobile);
-  }
+@media (max-width: 600px) {
+  .portfolio__image-1 { content: url("../../assets/images/portfolio/colored/image-1.png") }
+  .portfolio__image-2 { content: url("../../assets/images/portfolio/colored/image-2.png") }
+  .portfolio__image-3 { content: url("../../assets/images/portfolio/colored/image-3.png") }
+  .portfolio__image-4 { content: url("../../assets/images/portfolio/colored/image-4.png") }
+  .portfolio__image-5 { content: url("../../assets/images/portfolio/colored/image-5.png") }
+  .portfolio__image-6 { content: url("../../assets/images/portfolio/colored/image-9.png") }
+  .portfolio__image-7 { content: url("../../assets/images/portfolio/colored/image-7.png") }
+  .portfolio__image-8 { content: url("../../assets/images/portfolio/colored/image-8.png") }
+  .portfolio__image-9 { content: url("../../assets/images/portfolio/colored/image-6.png") }
+  .portfolio__image-10 { content: url("../../assets/images/portfolio/colored/image-10.png") }
 }
-@media(max-width: 449.6px) {
-  @include info-scale(0.6);
-  .portfolio__image {
-    width: calc(0.6 * $image__width-mobile);
+@media (max-width: 498px) {
+  .section-header {
+    font-size: var(--font-size-600);
   }
-}
-@media(max-width: 337.2px) {
-  @include info-scale(0.4);
-  .portfolio__image {
-    width: calc(0.4 * $image__width-mobile);
-  }
-}
 
+  .portfolio__body {
+    display: block;
+  }
+  .portfolio__image-1, .portfolio__image-2, .portfolio__image-3, .portfolio__image-4, .portfolio__image-5, .portfolio__image-6, .portfolio__image-8, .portfolio__image-9, .portfolio__image-10 {
+    display: none;
+  }
+}
+@media (max-width: 300px) { //actually 270
+  .portfolio__header {
+    display: none;
+  }
+}

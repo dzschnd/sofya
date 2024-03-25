@@ -1,163 +1,149 @@
-$card__padding-top: 5.25rem;
-$card__padding-side: 4.5rem;
-$card__padding-bottom: 6.25rem;
-
-$header__margin-bottom: 1.5rem;
-$footer__margin-top: 3.1875rem;
-
-$body__border: 0.0625rem;
-
-$image__width-desktop: 16.5625rem;
-
-$header__font-size: 2rem; //можно ли использовать <h1>??
-$subheader__font-size: 1.375rem;
-$list__font-size: 1.25rem;
-
-$li__margin: 0.35rem;
-$li__bullet-gap: -0.625rem;
-$footer__gap: 12.5rem;
-
-$button__font-size: 1.125rem;
-$button__padding-top: 1.125rem;
-$button__padding-side: 2.75rem;
-
-@mixin prices-scale($factor) {
-  .prices {
-    padding: calc($factor * $card__padding-top) calc($factor * $card__padding-side) calc($factor * $card__padding-bottom);
-  }
-  .prices__header {
-    margin-bottom: calc($factor * $header__margin-bottom);
-  }
-  .prices__body {
-    border: calc($factor * $body__border) solid var(--color-black);
-  }
-  .prices__image {
-    width: calc($factor * $image__width-desktop);
-  }
-  .prices__info-list li {
-    margin-bottom: calc($factor * $li__margin);
-    span { left: calc($factor * $li__bullet-gap); }
-  }
-  .prices__info-button {
-    padding: calc($factor * $button__padding-top) calc($factor * $button__padding-side);
-    font-size: calc($factor * $button__font-size);
-  }
-  .prices__info-footer {
-    margin-top: calc($factor * $footer__margin-top);
-    gap: calc($factor * $footer__gap);
-  }
-
-  .prices__header, .prices__info-header, .prices__info-price {
-    font-size: calc($factor * $header__font-size);
-  }
-  .prices__info-subheader {
-    font-size: calc($factor * $subheader__font-size);
-  }
-  .prices__info-list {
-    font-size: calc($factor * $list__font-size);
-  }
-}
-
 .prices {
-  max-width: 1176px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: $card__padding-top $card__padding-side $card__padding-bottom;
+  padding-bottom: 80px;
 }
-.prices__header {
-  margin-bottom: $header__margin-bottom;
-
-  font-size: $header__font-size;
-  font-family: IFKica, serif;
-  color: var(--color-grey);
-  font-weight: bold;
+.prices__body {
+  display: flex;
+  border: 1px solid var(--color-neutral-400);
+}
+.prices__image {
+  border-right: 1px solid var(--color-neutral-400);
+}
+.prices__text {
+  width: 100%;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+}
+.prices__text-subheader {
+  margin-top: 4px;
   text-align: right;
 }
-.prices__body { //height too big (borders)
-  border: $body__border solid var(--color-black);
-  box-sizing: border-box;
+.prices__text-list {
+  margin-left: 20px;
+  li {
+    margin-bottom: 11px;
+  }
+}
+.prices__text-footer {
   display: flex;
+  margin-top: auto;
+  justify-content: space-between;
 }
 
-.prices__info {
-  margin: auto
-}
-.prices__info-header {
-  font-size: $header__font-size;
-
-  font-family: IFKica, serif;
-  color: var(--color-grey);
-}
-.prices__info-subheader {
-  font-size: $subheader__font-size;
-
-  font-family: RozoviiChulok, serif;
-  color: var(--color-red);
-  text-align: right;
-}
-.prices__info-list {
-  font-size: $list__font-size;
-
-  font-family: IFKica, serif;
-  color: var(--color-grey);
-  font-weight: lighter;
-  list-style-position: inside;
-}
-.prices__info-list li {
-  margin-bottom: $li__margin;
-  span {
-    position: relative;
-    left: $li__bullet-gap;
+@media (max-width: 999px){
+  .prices__image {
+    display: none;
+  }
+  .prices__text-list {
+    font-size: var(--font-size-500);
+  }
+  .prices__text-footer {
+    margin-top: 45px;
   }
 }
-.prices__info-footer {
-  margin-top: $footer__margin-top;
-  gap: $footer__gap;
-  display: flex;
-}
-.prices__info-price {
-  font-size: $header__font-size;
-  font-family: IFKica, serif;
-  color: var(--color-red);
-  font-weight: bold;
-  display: table;
-  span {
-    display: table-cell;
-    vertical-align: middle;
+@media (max-width: 708px){
+  .prices__text {
+    padding: 30px 40px;
   }
-}
-.prices__info-button {
-  padding: $button__padding-top $button__padding-side;
-  border: none;
-  background-color: var(--color-red);
-  font-family: IFKica, serif;
-  color: var(--color-white);
-  font-weight: bold;
-  font-size: $button__font-size;
-}
-
-@media(max-width: 1176px) {
-  .prices { max-width: 941px; }
-  @include prices-scale(0.8);
-}
-@media(max-width: 941px) {
-  .prices { max-width: 705px; }
-  @include prices-scale(0.6);
-}
-@media(max-width: 705px) {
-  .prices { max-width: 562px; }
-  @include prices-scale(1);
-  .prices__body {
-    flex-direction: column-reverse;
+  .prices__text-header {
+    font-size: var(--font-size-700);
   }
-  .prices__info-footer {
+  .prices__text-subheader {
+    font-size: var(--font-size-700);
+  }
+  .prices__text-list {
+    font-size: var(--font-size-400);
+  }
+  .prices__text-footer {
     flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    margin-inline: auto;
+    margin-top: 25px;
+  }
+  .prices__text-footer button {
+    //переделать
+    margin-inline: auto;
   }
 }
-@media(max-width: 562px) {
+@media (max-width: 606px) {
+  .prices__text-header {
+    font-size: var(--font-size-600);
+  }
 }
-@media(max-width: 449.6px) {
+@media (max-width: 449px) {
+  .prices__text {
+    padding: 20px 25px;
+  }
+  .prices__text-header {
+    font-size: var(--font-size-500);
+  }
+  .prices__text-footer {
+    margin-inline: 0;
+  }
+  .prices__button {
+    width: min(264px, 100%);
+  }
 }
-@media(max-width: 337.2px) {
+@media (max-width: 405px) { //наугад
+  .prices__text {
+    padding: 8px 16px;
+  }
+  .prices__text-footer {
+    margin-top: 12px;
+  }
+  .prices__text-subheader {
+    font-size: var(--font-size-500);
+  }
+  .prices__text-list {
+    font-size: var(--font-size-300);
+  }
+  .prices__text-price {
+    font-size: var(--font-size-600);
+  }
+  .prices__text-list li {
+    margin-left: -4px;
+    span {
+      position: relative;
+      left: -4px;
+    }
+  }
 }
-
+@media (max-width: 357px) {
+  .prices__text-header {
+    font-size: var(--font-size-400);
+  }
+}
+@media (max-width: 318px) {
+  .prices__text-header {
+    font-size: var(--font-size-300);
+  }
+  .prices__text-subheader {
+    font-size: var(--font-size-400);
+  }
+  .prices__text-list {
+    font-size: var(--font-size-200);
+  }
+}
+@media (max-width: 303px) {
+  .prices__text {
+    padding: 4px 8px;
+  }
+  .main-button {
+    font-size: var(--font-size-300);
+  }
+}
+@media (max-width: 277px) {
+  .prices__text-header {
+    font-size: var(--font-size-200);
+  }
+  .prices__text-subheader {
+    font-size: var(--font-size-300);
+  }
+  .prices__text-list {
+    font-size: var(--font-size-100);
+  }
+  .main-button {
+    font-size: var(--font-size-200);
+  }
+}

@@ -1,29 +1,29 @@
 import React from 'react';
+import {ReactComponent as DownArrow} from '../../assets/images/qna/down-arrow.svg';
 
-import './QnA.css';
+import './QnA.scss';
 
 const QnA = () => (
-    <div className='qna'>
-        <div className='qna__title'>Q&A</div>
-        <div className='qna__text'>
-            <div className='question'>
-                Входйт лй аренда студйй в цену фотосессйй?
+    <div className='qna | section-wrapper'>
+        <div className='content-wrapper'>
+            <div className='section-header text-neutral-400'>
+                QnA
             </div>
-            <div className='border'></div>
-            <div className='question'>
-                Могу лй я продлйть время фотосессйй?
+            <div className='qna__body | font-size-500 font-weight-light text-neutral-400'>
+                <div className='question'>
+                    Входйт лй аренда студйй в цену фотосессйй?<DownArrow/>
+                </div>
+                <div className='question'>
+                    Могу лй я продлйть время фотосессйй?<DownArrow/>
+                </div>
+                <div className='question'>
+                    Я хочу на фотосессйю, но не умею позйровать. Что&nbsp;делать?<DownArrow/>
+                </div>
+                <div className='question'>
+                    Входйт лй аренда студйй в цену фотосессйй?<DownArrow/>
+                </div>
             </div>
-            <div className='border'></div>
-            <div className='question'>
-                Я хочу на фотосессйю, но не умею позйровать. Что делать?
-            </div>
-            <div className='border'></div>
-            <div className='question'>
-                Входйт лй аренда студйй в цену фотосессйй?
-            </div>
-            <div className='border'></div>
         </div>
     </div>
 );
-
 export default QnA;
