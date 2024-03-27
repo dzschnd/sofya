@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/sofya/static/css/main.2f9fb7cb.css",
+    "main.css": "/sofya/static/css/main.3e99cdd5.css",
     "main.js": "/sofya/static/js/main.c7468eaf.js",
     "static/media/image-family.png": "/sofya/static/media/image-family.aff4bfd88336dbcd98db.png",
     "static/media/image-individual.png": "/sofya/static/media/image-individual.ecb6370f1b98ea56924f.png",
@@ -35,11 +35,11 @@
     "index.html": "/sofya/index.html",
     "static/media/burger-menu.svg": "/sofya/static/media/burger-menu.ae83d860b65e54d2dcc1e88d0911df15.svg",
     "static/media/drop-down-arrow.svg": "/sofya/static/media/drop-down-arrow.77f84fe1262e329144d6346b701328de.svg",
-    "main.2f9fb7cb.css.map": "/sofya/static/css/main.2f9fb7cb.css.map",
+    "main.3e99cdd5.css.map": "/sofya/static/css/main.3e99cdd5.css.map",
     "main.c7468eaf.js.map": "/sofya/static/js/main.c7468eaf.js.map"
   },
   "entrypoints": [
-    "static/css/main.2f9fb7cb.css",
+    "static/css/main.3e99cdd5.css",
     "static/js/main.c7468eaf.js"
   ]
 }
