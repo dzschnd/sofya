@@ -1,6 +1,5 @@
 import React from 'react';
-
-import './Main.css';
+import './Main.css'
 
 const Main = () => (
     <div className='main'>
@@ -28,8 +27,6 @@ const Main = () => (
                 Покажу твою красоту<br/>
                 й чувственность через<br/>
                 свои взгляд
-            </div>
-            <div className='hero__button'>
                 <button>
                     Хочу съемку
                 </button>

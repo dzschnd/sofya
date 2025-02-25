@@ -6,14 +6,14 @@ import './assets/fonts/RozoviiChulok.ttf'
 const App = () => {
     return (
         <div className='app'>
-            {/*<Main/>*/}
+            <Main/>
             <Info/>
             <Portfolio/>
             <Services/>
-            {/*<Prices/>*/}
-            {/*<Quote/>*/}
-            {/*<QnA/>*/}
-            {/*<Contacts/>*/}
+            <Prices/>
+            <Quote/>
+            <QnA/>
+            <Contacts/>
         </div>
     )
 }
