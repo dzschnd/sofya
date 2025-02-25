@@ -1,0 +1,57 @@
+.welcome {
+    width: 1440px;
+    margin-inline: auto;
+    min-height: 1084px;
+    background: url('../../assets/images/sonya-welcome-desktop.png') no-repeat top;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+}
+
+.hero {
+    padding-top: 325px; //угадайка
+}
+
+.burger-menu {
+    display: none;
+}
+.nav-list {
+    min-width: 627px;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.hero__title-container {
+    position: relative;
+}
+.hero__subtitle { //угадайка
+    position: absolute;
+    top: 89px;
+    left: 381px;
+}
+.hero__quote {
+    padding-block: 39px 50px; //угадайка
+}
+
+.hero__button {
+    min-width: 264px;
+    min-height: 49px;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1080px) {
+    //.nav-list {
+    //    display: none;
+    //}
+    //.burger-menu {
+    //    display: block;
+    //}
+}
+
+
+

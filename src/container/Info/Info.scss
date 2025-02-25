@@ -1,0 +1,66 @@
+.info {
+  padding-block: 96px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  transform: translateY(-32px);
+}
+.info__body {
+  display: flex;
+  justify-content: space-between;
+  gap: 36px;
+}
+.info__text {
+  width: 100%;
+  position: relative;
+}
+.info__text p {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 160%;
+}
+.info__image img {
+  min-width: 418px;
+}
+
+@media (max-width: 1029px) {
+  //потом тюмень налеает на Соню
+  //тюмени поменбше
+  .info__text {
+    font-size: var(--font-size-300);
+  }
+}
+@media (max-width: 911px) {
+  .info {
+    padding-block: 72px;
+  }
+  .info__body {
+    flex-direction: column-reverse;
+    gap: 24px;
+  }
+  .info__text p {
+    position: relative;
+    top: 50%;
+    transform: translateY(0);
+    line-height: 160%;
+  }
+  .info__image img {
+    content: url("../../assets/images/info/sonya-about-wide.png");
+  }
+}
+@media (max-width: 498px) {
+  .info {
+    padding-block: 48px;
+  }
+  .section-header {
+    font-size: var(--font-size-600);
+  }
+  .info__text {
+    font-size: var(--font-size-200);
+  }
+  .info__image img {
+    content: url("../../assets/images/info/sonya-about-cropped.png");
+    min-width: 100%; //why does it work?
+  }
+}
+

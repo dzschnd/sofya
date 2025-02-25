@@ -1,0 +1,28 @@
+.qna {
+  padding-block: 120px 100px;
+}
+.question {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding-block: 22px;
+  border-bottom: 1px solid var(--color-neutral-900);
+}
+.question svg {
+  min-width: 19px;
+}
+@media (max-width: 911px) {
+  .question {
+    font-size: var(--font-size-400);
+  }
+}
+@media (max-width: 498px) {
+  .question {
+    font-size: var(--font-size-300);
+  }
+}
+@media (max-width: 270px) {
+  .question {
+    gap: 0;
+  }
+}

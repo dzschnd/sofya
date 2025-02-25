@@ -1,0 +1,54 @@
+.quote {
+  background: url('../../assets/images/sonya-quote-1440.png') no-repeat center;
+  height: 551px;
+  display: flex;
+  align-items: center;
+}
+.quote__body {
+  width: min(1032px, 100% - 4.5rem);
+}
+.quote__text {
+  float: right;
+  width: min(504px, 48.84vw);
+  height: min(265px, 25.68vw);
+  padding: 16px 24px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(68, 68, 68, 0.05);
+  border: 1px solid var(--color-neutral-100);
+  display: table;
+}
+.quote__text p {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+@media (max-width: 1032px) {
+  .quote {
+    background-image: url('../../assets/images/sonya-quote-1032.png');
+    height: min(551px, 53.391472868vw);
+    background-size: contain;
+  }
+}
+
+@media (max-width: 708px) {
+  .quote__text {
+    font-size: var(--font-size-400);
+  }
+}
+@media (max-width: 498px) {
+  .quote__text {
+    font-size: var(--font-size-300);
+  }
+}
+@media (max-width: 392px) {
+  .quote__text {
+    padding: 8px 12px;
+    font-size: var(--font-size-200);
+  }
+}
+@media (max-width: 300px) {
+  .quote__text {
+    font-size: var(--font-size-100);
+  }
+}

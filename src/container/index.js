@@ -1,4 +1,4 @@
-import Main from './Main/Main'
+import Welcome from './Welcome/Welcome'
 import Info from './Info/Info'
 import Portfolio from './Portfolio/Portfolio'
 import Services from './Services/Services'
@@ -8,7 +8,7 @@ import QnA from './QnA/QnA'
 import Contacts from './Contacts/Contacts'
 
 export {
-    Main,
+    Welcome,
     Info,
     Portfolio,
     Services,

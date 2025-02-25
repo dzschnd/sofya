@@ -1,0 +1,68 @@
+.services {
+  padding-block: 64px 100px;
+}
+.services__body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.services__text {
+  text-align: right;
+}
+
+@media (min-width: 909px) {
+  .services__image-1:hover { content: url("../../assets/images/services/colored/image-individual.png") }
+  .services__image-2:hover { content: url("../../assets/images/services/colored/image-katzen.png") }
+  .services__image-3:hover { content: url("../../assets/images/services/colored/image-family.png") }
+  .services__image-4:hover { content: url("../../assets/images/services/colored/image-content.png") }
+}
+
+@media (max-width: 1018px) {
+  .services__text {
+    font-size: var(--font-size-300);
+  }
+}
+
+@media (max-width: 911px) {
+  .services__body {
+    grid-template-columns: 1fr 1fr;
+  }
+  .services__image-1 { content: url("../../assets/images/services/colored-wide/image-individual.png") }
+  .services__image-2 { content: url("../../assets/images/services/colored-wide/image-katzen.png") }
+  .services__image-3 { content: url("../../assets/images/services/colored-wide/image-family.png") }
+  .services__image-4 { content: url("../../assets/images/services/colored-wide/image-content.png") }
+}
+@media (max-width: 600px){
+  .services__image-1 { content: url("../../assets/images/services/colored/image-individual.png") }
+  .services__image-2 { content: url("../../assets/images/services/colored/image-katzen.png") }
+  .services__image-3 { content: url("../../assets/images/services/colored/image-family.png") }
+  .services__image-4 { content: url("../../assets/images/services/colored/image-content.png") }
+}
+@media (max-width: 498px) {
+  .section-header {
+    font-size: var(--font-size-600);
+  }
+  .services__text {
+    font-size: var(--font-size-200);
+  }
+}
+@media (max-width: 392px) {
+  .services__image-1 { content: url("../../assets/images/services/colored-wide/image-individual.png") }
+  .services__image-2 { content: url("../../assets/images/services/colored-wide/image-katzen.png") }
+  .services__image-3 { content: url("../../assets/images/services/colored-wide/image-family.png") }
+  .services__image-4 { content: url("../../assets/images/services/colored-wide/image-content.png") }
+
+  .services__image-1:hover { content: url("../../assets/images/services/colored-wide/image-individual.png") }
+  .services__image-2:hover  { content: url("../../assets/images/services/colored-wide/image-katzen.png") }
+  .services__image-3:hover  { content: url("../../assets/images/services/colored-wide/image-family.png") }
+  .services__image-4:hover  { content: url("../../assets/images/services/colored-wide/image-content.png") }
+  .services__body {
+    grid-template-columns: 1fr;
+    gap: var(--font-size-200);;
+  }
+}
+@media (max-width: 289px) {
+  .section-header {
+    font-size: var(--font-size-500);
+  }
+}

@@ -1,0 +1,70 @@
+.portfolio {
+  padding-block: 50px 103px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  transform: translateY(-32px);
+}
+.portfolio__body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.portfolio__image {
+  margin-inline: auto;
+}
+@media (min-width: 912px){
+  .portfolio__image-1:hover { content: url("../../assets/images/portfolio/colored/image-1.png") }
+  .portfolio__image-2:hover { content: url("../../assets/images/portfolio/colored/image-2.png") }
+  .portfolio__image-3:hover { content: url("../../assets/images/portfolio/colored/image-3.png") }
+  .portfolio__image-4:hover { content: url("../../assets/images/portfolio/colored/image-4.png") }
+  .portfolio__image-5:hover { content: url("../../assets/images/portfolio/colored/image-5.png") }
+  .portfolio__image-6:hover { content: url("../../assets/images/portfolio/colored/image-9.png") }
+  .portfolio__image-7:hover { content: url("../../assets/images/portfolio/colored/image-7.png") }
+  .portfolio__image-8:hover { content: url("../../assets/images/portfolio/colored/image-8.png") }
+  .portfolio__image-9:hover { content: url("../../assets/images/portfolio/colored/image-6.png") }
+}
+
+@media (max-width: 911px) {
+  .portfolio__body {
+    grid-template-columns: 1fr 1fr;
+  }
+  .portfolio__image-1 { content: url("../../assets/images/portfolio/colored-wide/image-1.png") }
+  .portfolio__image-2 { content: url("../../assets/images/portfolio/colored-wide/image-2.png") }
+  .portfolio__image-3 { content: url("../../assets/images/portfolio/colored-wide/image-3.png") }
+  .portfolio__image-4 { content: url("../../assets/images/portfolio/colored-wide/image-4.png") }
+  .portfolio__image-5 { content: url("../../assets/images/portfolio/colored-wide/image-5.png") }
+  .portfolio__image-6 { content: url("../../assets/images/portfolio/colored-wide/image-6.png") }
+  .portfolio__image-7 { content: url("../../assets/images/portfolio/colored-wide/image-7.png") }
+  .portfolio__image-8 { content: url("../../assets/images/portfolio/colored-wide/image-8.png") }
+  .portfolio__image-9 { content: url("../../assets/images/portfolio/colored-wide/image-9.png") }
+  .portfolio__image-10 { content: url("../../assets/images/portfolio/colored-wide/image-10.png") }
+}
+@media (max-width: 600px) {
+  .portfolio__image-1 { content: url("../../assets/images/portfolio/colored/image-1.png") }
+  .portfolio__image-2 { content: url("../../assets/images/portfolio/colored/image-2.png") }
+  .portfolio__image-3 { content: url("../../assets/images/portfolio/colored/image-3.png") }
+  .portfolio__image-4 { content: url("../../assets/images/portfolio/colored/image-4.png") }
+  .portfolio__image-5 { content: url("../../assets/images/portfolio/colored/image-5.png") }
+  .portfolio__image-6 { content: url("../../assets/images/portfolio/colored/image-9.png") }
+  .portfolio__image-7 { content: url("../../assets/images/portfolio/colored/image-7.png") }
+  .portfolio__image-8 { content: url("../../assets/images/portfolio/colored/image-8.png") }
+  .portfolio__image-9 { content: url("../../assets/images/portfolio/colored/image-6.png") }
+  .portfolio__image-10 { content: url("../../assets/images/portfolio/colored/image-10.png") }
+}
+@media (max-width: 498px) {
+  .section-header {
+    font-size: var(--font-size-600);
+  }
+
+  .portfolio__body {
+    display: block;
+  }
+  .portfolio__image-1, .portfolio__image-2, .portfolio__image-3, .portfolio__image-4, .portfolio__image-5, .portfolio__image-6, .portfolio__image-8, .portfolio__image-9, .portfolio__image-10 {
+    display: none;
+  }
+}
+@media (max-width: 300px) { //actually 270
+  .portfolio__header {
+    display: none;
+  }
+}
