@@ -3,6 +3,7 @@ import React from 'react';
 import './Prices.scss';
 
 const Prices = () => (
+<<<<<<< HEAD
     <div className='prices | section-wrapper'>
         <div className='content-wrapper'>
             <div className='section-header text-neutral-400'>
@@ -30,6 +31,28 @@ const Prices = () => (
                         <button className='prices__button | main-button'>
                             Хочу съемку
                         </button>
+=======
+    <div className='prices'>
+        <div className='prices__title'>Праис</div>
+        <div className='prices__content'>
+            <img src={require('../../assets/images/sonya-prices.png')}/>
+            <div className='card__info'>
+                <div className='card__info-header'>
+                    Фйксйрованная цена
+                </div>
+                <div className='card__info-subheader'>
+                    на все виды фотосессий
+                </div>
+                <ul className='card__info-list'>
+                    <li><span>до 1,5 часов съемкй</span></li>
+                    <li><span>Помощь в подборе локацйй й образа</span></li>
+                    <li><span>от 60 кадров в цветокоррекцйй</span></li>
+                    <li><span>Готовые фотографйй в теченйе трех днеи</span></li>
+                </ul>
+                <div className='card__info-footer'>
+                    <div className='card__info-price'>
+                        4 500 р.
+>>>>>>> master
                     </div>
                 </div>
             </div>
