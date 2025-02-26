@@ -3,10 +3,11 @@
     --color-neutral-400: #3C3938;
     --color-neutral-100: #FFFFFF;
 
-    --color-background: #FFF3ED;
+    --color-background: #FFF4EE;
     --color-accent: #C33515;
 
     --font-family-primary: 'IFKica', sans-serif;
+    --font-family-secondary: "Inter", serif;
     --font-family-accent: 'RozoviiChulok', sans-serif;
 
     --font-weight-light: 300;
@@ -17,15 +18,14 @@
     --font-size-200: 0.75rem;
     --font-size-300: 0.875rem;
     --font-size-400: 1rem;
+    --font-size-450: 1.125rem;
     --font-size-500: 1.25rem;
+    --font-size-550: 1.375rem;
     --font-size-600: 1.5rem;
     --font-size-700: 1.75rem;
     --font-size-800: 2rem;
+    --font-size-900: 2.25rem;
 }
- @media (min-width: 50em) {
-
- }
-    //TODO
 
 *,
 *::before,

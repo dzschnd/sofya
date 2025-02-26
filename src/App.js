@@ -6,7 +6,7 @@ import './assets/fonts/RozoviiChulok.ttf'
 const App = () => {
     return (
         <div className='app'>
-            {/*<Welcome/>*/}
+            <Welcome/>
             <Info/>
             <Portfolio/>
             <Services/>

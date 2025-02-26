@@ -12,6 +12,10 @@
 .portfolio__image {
   margin-inline: auto;
 }
+.portfolio__body-mobile {
+  display: none;
+}
+
 @media (min-width: 912px){
   .portfolio__image-1:hover { content: url("../../assets/images/portfolio/colored/image-1.png") }
   .portfolio__image-2:hover { content: url("../../assets/images/portfolio/colored/image-2.png") }
@@ -55,12 +59,11 @@
   .section-header {
     font-size: var(--font-size-600);
   }
-
   .portfolio__body {
-    display: block;
-  }
-  .portfolio__image-1, .portfolio__image-2, .portfolio__image-3, .portfolio__image-4, .portfolio__image-5, .portfolio__image-6, .portfolio__image-8, .portfolio__image-9, .portfolio__image-10 {
     display: none;
+  }
+  .portfolio__body-mobile {
+    display: block;
   }
 }
 @media (max-width: 300px) { //actually 270

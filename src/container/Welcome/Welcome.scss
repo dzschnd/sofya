@@ -1,8 +1,13 @@
 .welcome {
-    width: 1440px;
     margin-inline: auto;
-    min-height: 1084px;
-    background: url('../../assets/images/sonya-welcome-desktop.png') no-repeat top;
+    min-height: 1080px;
+    height: 100%;
+    background: url('../../assets/images/welcome/sonya-welcome.png') no-repeat top;
+    background-size: cover;
+}
+
+.mobile-welcome-image {
+    display: none;
 }
 
 .header {
@@ -12,14 +17,15 @@
 }
 
 .hero {
-    padding-top: 325px; //угадайка
+    padding-top: 181px;
 }
 
 .burger-menu {
     display: none;
 }
+
 .nav-list {
-    min-width: 627px;
+    gap: 60px;
     display: flex;
     justify-content: space-between;
     list-style-type: none;
@@ -28,29 +34,83 @@
 .hero__title-container {
     position: relative;
 }
-.hero__subtitle { //угадайка
+.hero__title {
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-900);
+}
+.hero__subtitle {
     position: absolute;
-    top: 89px;
-    left: 381px;
+    top: 58px;
+    left: 252px;
+    width: 166px;
+    height: 38px;
+    transform: rotate(-3.58deg);
 }
 .hero__quote {
-    padding-block: 39px 50px; //угадайка
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-size-300);
+    padding-block: 24px 36px;
 }
 
-.hero__button {
-    min-width: 264px;
-    min-height: 49px;
-    border: none;
-    cursor: pointer;
-}
 
 @media (max-width: 1080px) {
-    //.nav-list {
-    //    display: none;
-    //}
-    //.burger-menu {
-    //    display: block;
-    //}
+    .nav-list {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 832px) {
+    .header {
+        background-color: var(--color-background);
+        padding-top: 15px;
+    }
+    .header img {
+        display: none;
+    }
+    nav {
+        width: 100%;
+    }
+    .nav-list {
+        justify-content: space-between;
+        li a {
+            color: var(--color-neutral-900);
+        }
+    }
+    .welcome {
+        background: var(--color-background);
+        min-height: 0;
+    }
+    .hero {
+        padding-top: 0;
+    }
+    .mobile-welcome-image {
+        display: block;
+        margin-block: 20px;
+        min-height: 511px;
+        background: url('../../assets/images/welcome/sonya-welcome.png') no-repeat top;
+        background-size: cover;
+    }
+
+    .hero__title {
+        font-size: var(--font-size-450);
+        text-align: center;
+    }
+    .hero__subtitle {
+        display: none;
+    }
+    .hero__quote {
+        font-size: var(--font-size-200);
+        padding-block: 8px 20px;
+        text-align: center;
+    }
+    br {
+        display: none;
+    }
+    .hero__button-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 

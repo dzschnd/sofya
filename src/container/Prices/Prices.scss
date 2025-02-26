@@ -1,20 +1,35 @@
 .prices {
   padding-bottom: 80px;
 }
+.prices .section-header {
+  text-align: center;
+}
 .prices__body {
+  margin-inline: auto;
+  max-width: 1014px;
   display: flex;
   border: 1px solid var(--color-neutral-400);
 }
 .prices__image {
-  border-right: 1px solid var(--color-neutral-400);
+  max-width: 290px;
+  width: 100%;
+  min-height: 347px;
+  background: url('../../assets/images/prices/sonya-prices.png') no-repeat;
+  background-size: cover;
 }
 .prices__text {
   width: 100%;
-  padding: 40px 50px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+.prices__text-header {
+  max-width: 473px;
 }
 .prices__text-subheader {
+  max-width: 473px;
+
   margin-top: 4px;
   text-align: right;
 }
@@ -26,124 +41,41 @@
 }
 .prices__text-footer {
   display: flex;
-  margin-top: auto;
+  margin-top: 36px;
   justify-content: space-between;
 }
+.prices__text-price {
+  display: flex;
+  align-items: center;
+}
 
-@media (max-width: 999px){
+@media (max-width: 924px) {
   .prices__image {
-    display: none;
-  }
-  .prices__text-list {
-    font-size: var(--font-size-500);
-  }
-  .prices__text-footer {
-    margin-top: 45px;
+    max-width: 231px;
   }
 }
-@media (max-width: 708px){
+
+@media (max-width: 832px) {
+  .prices__body {
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 356px;
+  }
+  .prices__image {
+    max-width: 100%;
+  }
   .prices__text {
-    padding: 30px 40px;
+    padding: 24px;
   }
   .prices__text-header {
-    font-size: var(--font-size-700);
-  }
-  .prices__text-subheader {
-    font-size: var(--font-size-700);
-  }
-  .prices__text-list {
-    font-size: var(--font-size-400);
+    font-size: var(--font-size-500);
   }
   .prices__text-footer {
     flex-direction: column;
     gap: 12px;
-    text-align: center;
-    margin-inline: auto;
-    margin-top: 25px;
-  }
-  .prices__text-footer button {
-    //переделать
-    margin-inline: auto;
-  }
-}
-@media (max-width: 606px) {
-  .prices__text-header {
-    font-size: var(--font-size-600);
-  }
-}
-@media (max-width: 449px) {
-  .prices__text {
-    padding: 20px 25px;
-  }
-  .prices__text-header {
-    font-size: var(--font-size-500);
-  }
-  .prices__text-footer {
-    margin-inline: 0;
+    margin-top: 24px;
   }
   .prices__button {
-    width: min(264px, 100%);
-  }
-}
-@media (max-width: 405px) { //наугад
-  .prices__text {
-    padding: 8px 16px;
-  }
-  .prices__text-footer {
-    margin-top: 12px;
-  }
-  .prices__text-subheader {
-    font-size: var(--font-size-500);
-  }
-  .prices__text-list {
-    font-size: var(--font-size-300);
-  }
-  .prices__text-price {
-    font-size: var(--font-size-600);
-  }
-  .prices__text-list li {
-    margin-left: -4px;
-    span {
-      position: relative;
-      left: -4px;
-    }
-  }
-}
-@media (max-width: 357px) {
-  .prices__text-header {
-    font-size: var(--font-size-400);
-  }
-}
-@media (max-width: 318px) {
-  .prices__text-header {
-    font-size: var(--font-size-300);
-  }
-  .prices__text-subheader {
-    font-size: var(--font-size-400);
-  }
-  .prices__text-list {
-    font-size: var(--font-size-200);
-  }
-}
-@media (max-width: 303px) {
-  .prices__text {
-    padding: 4px 8px;
-  }
-  .main-button {
-    font-size: var(--font-size-300);
-  }
-}
-@media (max-width: 277px) {
-  .prices__text-header {
-    font-size: var(--font-size-200);
-  }
-  .prices__text-subheader {
-    font-size: var(--font-size-300);
-  }
-  .prices__text-list {
-    font-size: var(--font-size-100);
-  }
-  .main-button {
-    font-size: var(--font-size-200);
+    width: 100%;
   }
 }
